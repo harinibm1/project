@@ -1,0 +1,184 @@
+<web-app>
+
+
+
+	<servlet>
+		<servlet-name>CheckUser</servlet-name>
+		<servlet-class>com.login.CheckUser</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CheckUser</servlet-name>
+		<url-pattern>/CheckUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EditUser</servlet-name>
+		<servlet-class>com.main.actions.EditUser</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EditUser</servlet-name>
+		<url-pattern>/EditUser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GoBack</servlet-name>
+		<servlet-class>com.main.actions.GoBack</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GoBack</servlet-name>
+		<url-pattern>/GoBack</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AndroidResponse</servlet-name>
+		<servlet-class>com.main.actions.AndroidResponse</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AndroidResponse</servlet-name>
+		<url-pattern>/AndroidResponse</url-pattern>
+	</servlet-mapping>
+	 
+	<servlet>
+		<servlet-name>UpdateCloud</servlet-name>
+		<servlet-class>com.main.actions.UpdateCloud</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateCloud</servlet-name>
+		<url-pattern>/UpdateCloud</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ViewPasswords</servlet-name>
+		<servlet-class>com.main.actions.ViewPasswords</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ViewPasswords</servlet-name>
+		<url-pattern>/ViewPasswords</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>adminloginaction</servlet-name>
+		<servlet-class>com.main.actions.adminloginaction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>adminloginaction</servlet-name>
+		<url-pattern>/adminloginaction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>adminchangepwdaction</servlet-name>
+		<servlet-class>com.main.actions.adminchangepwdaction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>adminchangepwdaction</servlet-name>
+		<url-pattern>/adminchangepwdaction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>adduseraction</servlet-name>
+		<servlet-class>com.main.actions.adduseraction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>adduseraction</servlet-name>
+		<url-pattern>/adduseraction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>adduserdao</servlet-name>
+		<servlet-class>com.main.actions.adduserdao</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>adduserdao</servlet-name>
+		<url-pattern>/adduserdao</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>updateuseraction</servlet-name>
+		<servlet-class>com.main.actions.updateuseraction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updateuseraction</servlet-name>
+		<url-pattern>/updateuseraction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>deleteuseraction</servlet-name>
+		<servlet-class>com.main.actions.deleteuseraction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>deleteuseraction</servlet-name>
+		<url-pattern>/deleteuseraction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>addspotaction</servlet-name>
+		<servlet-class>com.main.actions.addspotaction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>addspotaction</servlet-name>
+		<url-pattern>/addspotaction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>updatespotaction</servlet-name>
+		<servlet-class>com.main.actions.updatespotaction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updatespotaction</servlet-name>
+		<url-pattern>/updatespotaction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>deletespotaction</servlet-name>
+		<servlet-class>com.main.actions.deletespotaction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>deletespotaction</servlet-name>
+		<url-pattern>/deletespotaction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>addfineaction</servlet-name>
+		<servlet-class>com.main.actions.addfineaction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>addfineaction</servlet-name>
+		<url-pattern>/addfineaction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>updatefineaction</servlet-name>
+		<servlet-class>com.main.actions.updatefineaction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>updatefineaction</servlet-name>
+		<url-pattern>/updatefineaction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>deletefineaction</servlet-name>
+		<servlet-class>com.main.actions.deletefineaction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>deletefineaction</servlet-name>
+		<url-pattern>/deletefineaction</url-pattern>
+	</servlet-mapping>
+</web-app>
