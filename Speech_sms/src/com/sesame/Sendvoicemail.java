@@ -76,7 +76,7 @@ public class Sendvoicemail extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				System.out.println("its came inside btnspk");
                 promptSpeechInput();
 			}
@@ -86,7 +86,7 @@ public class Sendvoicemail extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+			
 				 promptSpeechInput1();
 			}
 		});
@@ -96,7 +96,7 @@ public class Sendvoicemail extends Activity {
 			  
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				 promptSpeechInput2();
 			}
 		});
@@ -104,7 +104,7 @@ public class Sendvoicemail extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				
 				String s = "Sending Your Mail";
 				 t1.speak(s, TextToSpeech.QUEUE_FLUSH, null);
@@ -125,7 +125,7 @@ public class Sendvoicemail extends Activity {
 	}
 
 	protected void sendMail(String to, String sub, String body) {
-		// TODO Auto-generated method stub
+		
 		try {
 
 			ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
@@ -148,7 +148,7 @@ public class Sendvoicemail extends Activity {
 	
 
 	protected void promptSpeechInput2() {
-		// TODO Auto-generated method stub
+		
 		   Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
 	        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
 	                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -165,7 +165,7 @@ public class Sendvoicemail extends Activity {
 	}
 
 	protected void promptSpeechInput1() {
-		// TODO Auto-generated method stub
+		
 		 Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
 	        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
 	                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -182,7 +182,7 @@ public class Sendvoicemail extends Activity {
 	}
 
 	protected void promptSpeechInput() {
-		// TODO Auto-generated method stub
+		
 		Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
@@ -199,7 +199,7 @@ public class Sendvoicemail extends Activity {
 	}
 @Override
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-	// TODO Auto-generated method stub
+
 	
 	
 	super.onActivityResult(requestCode, resultCode, data);

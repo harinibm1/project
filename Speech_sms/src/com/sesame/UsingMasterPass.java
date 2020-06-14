@@ -28,7 +28,7 @@ public class UsingMasterPass extends Activity
 	String name2="";
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-	// TODO Auto-generated method stub
+	
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.using_master_pass);
 	
@@ -36,11 +36,11 @@ protected void onCreate(Bundle savedInstanceState) {
 	btn=(Button) findViewById(R.id.mast_btn);
 	
 	session = new SessionManager(getApplicationContext());
-	// session.checkLogin();
+
 
 	HashMap<String, String> user1 = session.getUserDetails();
 
-	// name
+	
 	name2 = user1.get(SessionManager.KEY_NAME);
 	pass = user1.get(SessionManager.KEY_PWD);
 	btn.setOnClickListener(new OnClickListener() {
@@ -69,7 +69,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 				try {
 					
-					// HttpPost httppost = new HttpPost("http://122.166.104.51:8000/Traffic_System/changepass.jsp");
+				
 					
 					response = CustomHttpClient.executeHttpPost(Global.URL+"speechsms/usingMasterpass.jsp", nameValuePairs);
 

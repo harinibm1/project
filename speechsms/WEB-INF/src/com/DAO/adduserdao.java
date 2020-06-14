@@ -26,7 +26,7 @@ public class adduserdao extends HttpServlet {
 	 */
 	public adduserdao() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static int checkid(String id) throws Exception {
@@ -43,7 +43,7 @@ public class adduserdao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql="select u_login_id from m_user where u_login_id='"+ id + "'";
 			System.out.println("sql :"+sql);
@@ -77,7 +77,7 @@ public class adduserdao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql="select u_code from m_user where u_login_id='"+ id + "'";
 			System.out.println("sql :"+sql);
@@ -144,7 +144,7 @@ public static String checkUser2(String name, String pwd) throws Exception {
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select *from m_user where u_login_id='"+ name + "' and u_login_pwd='" + pwd + "'");
 
@@ -177,7 +177,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 		System.out.println("Connection Established !");
 
 		stmt = con.createStatement();
-		System.out.println("Statment Established !");
+		System.out.println("Statement Established !");
 
 		int k = stmt.executeUpdate("update m_user set u_otp_pass='"+otp+"' where u_login_id='"+userid+"'");
 
@@ -207,7 +207,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql="select *from m_user where u_login_id='"+ name + "' and u_login_pwd='" + pwd + "' and master_key='"+mastpass+"'";
 			System.out.println("sql :"+sql);
@@ -243,7 +243,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql="select * from m_password where user_code='"+uno+"' and pass_detail='"+dname+"' and u_id='"+uid+"'";
 			System.out.println("sql :"+sql);
@@ -343,7 +343,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select *from m_user where u_login_id='"+ id + "' and u_login_pwd='" + oldpwd + "'");
 
@@ -375,7 +375,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select  verify_user_status from m_user where u_login_id='"+ name + "' ");
 
@@ -408,7 +408,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select  f_name from m_trans where f_subject='"+ remark + "' and u_code='"+ucode+"' ");
 
@@ -439,7 +439,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select *from m_user where u_login_id='"+ id + "'");
 
@@ -471,7 +471,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select *from m_user where u_otp_pass='"+ onetp + "'");
 
@@ -502,7 +502,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select u_code,u_name,u_key from m_user where u_login_id='"+ userid + "'");
 
@@ -537,7 +537,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select u_name from m_user where u_code='"+ code + "'");
 
@@ -571,7 +571,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select f_subject from m_trans where u_code='"+ usercode + "' and f_name = '"+filename+"'");
 
@@ -605,7 +605,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "select a.f_subject from m_trans a join m_user b on a.u_code=b.u_code where a.f_type='Uploaded' and b.u_login_id='"+userid+"'";
 			
@@ -642,7 +642,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "select a.f_name from m_trans a join m_user b on a.u_code=b.u_code where a.f_type='Downloaded' and b.u_login_id='"+userid+"'";
 			
@@ -725,7 +725,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "insert into m_trans(t_date,t_time,u_code,f_name,f_subject,f_type) values('"
 					+ date
@@ -770,7 +770,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "select  u_login_id,u_name,u_mobile from m_user where u_login_id='"
 					+ userid + "'";
@@ -806,7 +806,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "select img_name from m_image";
 			rs = stmt.executeQuery(sql);
@@ -839,7 +839,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "select u_code from m_user where u_login_id = '"
 					+ user.trim() + "'";
@@ -859,7 +859,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 	public static ResultSet getUserPasswords(String ucode) {
 		int flag = 0;
 
-		// ArrayList<String> list = new ArrayList<String>();
+		
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -873,7 +873,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "select * from m_password where user_code = '"
 					+ ucode.trim() + "'";
@@ -890,7 +890,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 	public static String getUserSinglePassword(String ucode,String word) {
 		int flag = 0;
 
-				// ArrayList<String> list = new ArrayList<String>();
+				
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -909,7 +909,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "select * from m_password where user_code = '"
 					+ ucode.trim() + "' and pass_detail='"+word+"'";
@@ -943,7 +943,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "update m_user set u_login_pwd='" + newpass
 					+ "' where u_login_id='" + user + "'";
@@ -974,7 +974,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "update m_user set master_key='" + newpass
 					+ "' where u_login_id='" + user + "'";
@@ -1004,7 +1004,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "update m_user set verify_user_status='Done' where u_otp_pass='" + otp + "'";
 			System.out.println(sql);
@@ -1033,7 +1033,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "update m_user set verify_user_status='Done',imeino='"+imei+"' where u_login_id='" + userid + "'";
 			System.out.println(sql);
@@ -1062,7 +1062,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 			System.out.println("Connection Established !");
 
 			stmt = con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql = "select t_amount from m_trans where u_code = '" + code
 					+ "' and t_date = '" + date + "'";

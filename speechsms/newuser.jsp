@@ -54,8 +54,6 @@
 
 
 
-	// String msg = name+" ,"+" Your One Time Password is "+onetp;
-	// System.out.println(msg);
 
 
 
@@ -72,8 +70,7 @@
 		  }
 
 
-	//String status=sb.toString();
-	//out.println(sb.toString());
+	
 	System.out.println("  Status is: " + sb.toString());
 	}
 

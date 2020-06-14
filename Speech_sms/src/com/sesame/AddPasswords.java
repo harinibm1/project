@@ -2,13 +2,10 @@ package com.sesame;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
-
 import com.HttpClient.CustomHttpClient;
 import com.util.RandomValue;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -28,7 +25,7 @@ public class AddPasswords extends Activity
 	SessionManager session;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-	// TODO Auto-generated method stub
+	
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.add_passwords);
 	txt1=(EditText) findViewById(R.id.dname);
@@ -93,11 +90,10 @@ protected void onCreate(Bundle savedInstanceState) {
 
 					try {
 						session = new SessionManager(getApplicationContext());
-						// session.checkLogin();
+						
 
 						HashMap<String, String> user1 = session.getUserDetails();
 
-						// name
 						String name2 = user1.get(SessionManager.KEY_NAME);
 						
 						ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
@@ -119,10 +115,10 @@ protected void onCreate(Bundle savedInstanceState) {
 							AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context
 				    				);
 
-				    			// set title
+				    		
 				    			alertDialogBuilder.setTitle("ADD More");
 
-				    			// set dialog message
+				    		
 				    			alertDialogBuilder
 				    				.setMessage("Do You Want ADD More Password..!")
 				    				.setCancelable(false)

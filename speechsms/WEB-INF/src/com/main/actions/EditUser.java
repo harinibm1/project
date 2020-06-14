@@ -30,7 +30,7 @@ public class EditUser extends HttpServlet
 			String code =req.getParameter("code");
 			String mobile = req.getParameter("umobile");
 			RequestDispatcher rd = null;
-			//String chk=req.getParameter("chk");
+			
 			
 			System.out.println("User Id :"+uid);
 			System.out.println("User Name :"+name);
@@ -61,12 +61,12 @@ public class EditUser extends HttpServlet
 			} 
 			catch (NumberFormatException e)
 			{
-				// TODO Auto-generated catch block
+			
 				e.printStackTrace();
 			}
 			catch (SQLException e)
 			{
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			

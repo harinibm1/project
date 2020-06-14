@@ -1,10 +1,3 @@
-/**
- @Author : Palani Kannan
- Date : Aug 22,2015
- File : CustomListViewAdapter.java
- Package : com.util
-*/
-
 package com.listview;
 
 import java.util.List;
@@ -34,7 +27,7 @@ public class CustomListViewAdapter extends ArrayAdapter<RowItem>
         this.context = context;
     }
  
-    /*private view holder class*/
+  
     private class ViewHolder 
     {
         ImageView imageView;
@@ -66,18 +59,10 @@ public class CustomListViewAdapter extends ArrayAdapter<RowItem>
         holder.qnDesc.setText(rowItem.getQnNumber());
         holder.qnLabel.setText(rowItem.getSurveyId());
         
-        //Setting The Image From Drawable Dir Using Int Id
-        //holder.imageView.setImageResource(rowItem.getImageId());
+        
         holder.imageView.setImageResource(R.drawable.add);
         
-/*        //holder.imageView.setImageResource(R.drawable.mob_search);
-        
-      //Setting The Image From Sdcard
-        String symbolFileName = rowItem.getImageName().trim();
-        String outputPath = Environment.getExternalStorageDirectory()+ "/PMSE/"+symbolFileName; 
-        //voterImage.setImageURI(Uri.parse(imagePath));//Input As String filePath(ImageView)
-        holder.imageView.setImageURI(Uri.parse(outputPath));
-*/        
+       
  
         return convertView;
     }

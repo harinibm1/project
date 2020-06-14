@@ -1,22 +1,9 @@
-/**
- @Author : Amutha
- Date : Oct 8, 2013
- File : HomeScreen.java
- Package : com.example.trafficsyatem
-*/
-
 package com.sesame;
 
 import java.util.HashMap;
 import java.util.Locale;
-
-
 import com.util.RandomValue;
 import com.util.Send_SMS_Service;
-
-
-
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -47,11 +34,11 @@ public class HomeScreen extends Activity
         setContentView(R.layout.home);
       
         session = new SessionManager(getApplicationContext());
-        // session.checkLogin();
+     
         
         HashMap<String, String> user = session.getUserDetails();
         
-        // name
+    
         String name = user.get(SessionManager.KEY_NAME);
         
         mail =  (Button)findViewById(R.id.btn_Mail);
@@ -71,12 +58,10 @@ public class HomeScreen extends Activity
 		
 			
 		});
-        // email
-        //String email = user.get(SessionManager.KEY_EMAIL);
+        
         System.out.println("=================================");
         System.out.println("UserName "+name+" pass :"+pass);
         System.out.println("=================================");
-        //session.createLoginSession(name,pass,null,null);
         mail.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -112,7 +97,7 @@ public class HomeScreen extends Activity
 		});
     }
      
-    // Initiating Menu XML file (menu.xml)
+  
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -121,10 +106,10 @@ public class HomeScreen extends Activity
         return true;
     }
      
-    /**
-     * Event Handling for Individual menu item selected
-     * Identify single menu item by it's id
-     * */
+    
+     /* Event Handling for Individual menu item selected
+      Identify single menu item by it's id*/
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -132,72 +117,46 @@ public class HomeScreen extends Activity
         switch (item.getItemId())
         {
         case R.id.profile:
-            // Single menu item is selected do something
-            // Ex: launching new activity/screen or show alert message
+            
             Toast.makeText(HomeScreen.this, "User Selected Profile", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(getApplicationContext(), Profile.class);
             startActivity(i);
             return true;
             
-      /*  case R.id.battery:
-            // Single menu item is selected do something
-            // Ex: launching new activity/screen or show alert message
-       
-            Intent ib = new Intent(getApplicationContext(), Battery.class);
-            startActivity(ib);
-            return true;*/
-   /*     case R.id.sms:
-            // Single menu item is selected do something
-            // Ex: launching new activity/screen or show alert message
-            Toast.makeText(HomeScreen.this, "User Selected Voice SMS", Toast.LENGTH_SHORT).show();
-            Intent i6 = new Intent(getApplicationContext(), Sendvoicesms.class);
-            startActivity(i6);
-            return true;*/
-      /*  case R.id.mail:
-            // Single menu item is selected do something
-            // Ex: launching new activity/screen or show alert message
-            Toast.makeText(HomeScreen.this, "User Selected Voice MAIL", Toast.LENGTH_SHORT).show();
-            Intent i7 = new Intent(getApplicationContext(), Sendvoicemail.class);
-            startActivity(i7);
-            return true;
- */
         case R.id.voice_password:
-            // Single menu item is selected do something
-            // Ex: launching new activity/screen or show alert message
+            
             Toast.makeText(HomeScreen.this, "User Selected Voice Password", Toast.LENGTH_SHORT).show();
             Intent i1 = new Intent(getApplicationContext(), Voiceprocess.class);
             startActivity(i1);
             return true;
  
         case R.id.master_password:
-            // Single menu item is selected do something
-            // Ex: launching new activity/screen or show alert message
+           
             Toast.makeText(HomeScreen.this, "User Selected Master Password", Toast.LENGTH_SHORT).show();
             Intent i2 = new Intent(getApplicationContext(), UsingMasterPass.class);
             startActivity(i2);
             return true;
  
         case R.id.master_pass:
-            // Single menu item is selected do something
-            // Ex: launching new activity/screen or show alert message
+           
         	
         { final Context context = this;
         
         session = new SessionManager(getApplicationContext());
-		// session.checkLogin();
+	
 
 		HashMap<String, String> user1 = session.getUserDetails();
 
-		// name
+		
 		final String userpno = user1.get(SessionManager.KEY_PHONE);
         
         	AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context
     				);
 
-    			// set title
+    		
     			alertDialogBuilder.setTitle("Are You Sure");
 
-    			// set dialog message
+    		
     			alertDialogBuilder
     				.setMessage("To Change Master Password..!")
     				.setCancelable(false)
@@ -207,7 +166,6 @@ public class HomeScreen extends Activity
     						
     						String otp=RandomValue.otpValue();
     						String msg="Your OTP Number is :"+otp;
-    						//boolean flag=Send_SMS_Service.sendSMS(userpno, msg);
     						boolean flag=	 sendSMS(userpno, msg);
     						System.out.println(msg);
     						if(flag)
@@ -233,25 +191,17 @@ public class HomeScreen extends Activity
     					}
     				});
 
-    				// create alert dialog
+    			
     				AlertDialog alertDialog = alertDialogBuilder.create();
 
-    				// show it
+    			
     				alertDialog.show();
     				 
         }
         	
-          /*  Toast.makeText(HomeScreen.this, "User Selected Master Password Settings", Toast.LENGTH_SHORT).show();
-            Intent i3 = new Intent(getApplicationContext(), Profile.class);
-            startActivity(i3);*/
+         
             return true;
- 
-       /* case R.id.rem_dt:
-            Toast.makeText(HomeScreen.this, "////////////", Toast.LENGTH_SHORT).show();
-            Intent int2 = new Intent(getApplicationContext(), ReminderListActivity.class);
-            startActivity(int2);
-            return true;*/
-            
+       
         case R.id.changepass:
             Toast.makeText(HomeScreen.this, "User Selected Change Password", Toast.LENGTH_SHORT).show();
             Intent intent2 = new Intent(getApplicationContext(), ChangePassword.class);

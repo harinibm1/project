@@ -1,9 +1,6 @@
 package com.sesame;
 
 import java.util.Locale;
-
-
-
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -33,34 +30,13 @@ public class Battery extends Activity {
 	private TextView mTextViewPercentage;
 	private ProgressBar mProgressBar;
 	private int mProgressStatus = 0;
-	private BroadcastReceiver mBatInfoReceiver = new BroadcastReceiver() {// Broadcast
-																			// Receivers
-																			// simply
-																			// respond
-																			// to
-																			// broadcast
-																			// messages
-																			// from
-																			// other
-																			// applications
-																			// or
-																			// from
-																			// the
-																			// system
-																			// itself.
+	private BroadcastReceiver mBatInfoReceiver = new BroadcastReceiver() {
 		public void onReceive(Context ctxt, Intent intent) {
-			int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);// EXTRA_SCALE--
-																			// max
-																			// battery
-																			// level
+			int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
 
 			mTextViewInfo.setText("Battery Scale : " + scale);
 
-			level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);// EXTRA_LEVEL
-																		// --
-																		// current
-																		// battery
-																		// level
+			level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
 			mTextViewInfo.setText(mTextViewInfo.getText()
 					+ "\nBattery Level : " + level);
 			float percentage = level / (float) scale;
@@ -125,29 +101,8 @@ public class Battery extends Activity {
 	
 
 		mContext = getApplicationContext();
-		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);// ACTION_BATTERY_CHANGED--provides
-																				// a
-																				// method
-																				// for
-																				// querying
-																				// battery
-																				// and
-																				// charging
-																				// properties
-		mContext.registerReceiver(mBatInfoReceiver, iFilter);// IntentFilter--by
-																// declaring an
-																// intent filter
-																// for an
-																// activity, you
-																// make it
-																// possible for
-																// other apps to
-																// directly
-																// start your
-																// activity with
-																// a certain
-																// kind of
-																// intent.
+		IntentFilter iFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+		mContext.registerReceiver(mBatInfoReceiver, iFilter);
 		mTextViewInfo = (TextView) findViewById(R.id.tv_info);
 		mTextViewPercentage = (TextView) findViewById(R.id.tv_percentage);
 		mProgressBar = (ProgressBar) findViewById(R.id.pb);

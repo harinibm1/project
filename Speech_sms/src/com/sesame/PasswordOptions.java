@@ -11,7 +11,7 @@ public class PasswordOptions extends Activity
 	Button btnView,btnAdd;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-	// TODO Auto-generated method stub
+	
 	super.onCreate(savedInstanceState);
 	
 	setContentView(R.layout.passwordoptions);
@@ -25,9 +25,9 @@ protected void onCreate(Bundle savedInstanceState) {
    // Set OnClick Listener on SignUp button 
 	btnAdd.setOnClickListener(new View.OnClickListener() {
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+		
 
-		/// Create Intent for SignUpActivity  abd Start The Activity
+		// Create Intent for SignUpActivity  abd Start The Activity
 		System.out.println("add passwords");
 		Intent intentSignUP=new Intent(getApplicationContext(),AddPasswords.class);
 		startActivity(intentSignUP);
@@ -41,9 +41,9 @@ protected void onCreate(Bundle savedInstanceState) {
 // Set OnClick Listener on Log In button 
 	btnView.setOnClickListener(new View.OnClickListener() {
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
+	
 
-		/// Create Intent for SignUpActivity  abd Start The Activity
+		// Create Intent for SignUpActivity and Start The Activity
 		System.out.println("view password");
 		
 		Intent intentSignUP=new Intent(getApplicationContext(),PasswordsList.class);

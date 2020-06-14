@@ -28,15 +28,15 @@ import android.widget.Toast;
 
 public class ReminderEditActivity extends Activity {
 
-	// 
-	// Dialog Constants
-	//
+	 
+	
+	
 	private static final int DATE_PICKER_DIALOG = 0;
 	private static final int TIME_PICKER_DIALOG = 1;
 	
-	// 
-	// Date Format 
-	//
+	 
+	
+	
 	private static final String DATE_FORMAT = "yyyy-MM-dd"; 
 	private static final String TIME_FORMAT = "kk:mm";
 	public static final String DATE_TIME_FORMAT = "yyyy-MM-dd kk:mm:ss";
@@ -174,8 +174,7 @@ public class ReminderEditActivity extends Activity {
     	
   	
     	
-    	// Only populate the text boxes and change the calendar date
-    	// if the row is not null from the database. 
+    	
         if (mRowId != null) {
             Cursor reminder = mDbHelper.fetchReminder(mRowId);
             startManagingCursor(reminder);
@@ -185,7 +184,7 @@ public class ReminderEditActivity extends Activity {
                     reminder.getColumnIndexOrThrow(RemindersDbAdapter.KEY_BODY)));
             
 
-            // Get the date from the database and format it for our use. 
+       
             SimpleDateFormat dateTimeFormat = new SimpleDateFormat(DATE_TIME_FORMAT);
             Date date = null;
 			try {
@@ -196,7 +195,7 @@ public class ReminderEditActivity extends Activity {
 				Log.e("ReminderEditActivity", e.getMessage(), e); 
 			} 
         } else {
-        	// This is a new task - add defaults from preferences if set. 
+       
         	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this); 
         	String defaultTitleKey = getString(R.string.pref_task_title_key); 
         	String defaultTimeKey = getString(R.string.pref_default_time_from_now_key); 

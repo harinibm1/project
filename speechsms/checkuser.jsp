@@ -13,7 +13,7 @@
 	String flag = null;
 
 	StringBuffer sb = null;
-	String info = "Opps,Something Went Wrong Try Again..";%>
+	String info = "Something Went Wrong Try Again..";%>
 
 <%
 	sb = new StringBuffer();

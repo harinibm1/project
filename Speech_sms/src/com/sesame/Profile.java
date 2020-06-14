@@ -26,7 +26,7 @@ public class Profile extends Activity
 	Button goback;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.profile);
 		
@@ -48,19 +48,16 @@ public class Profile extends Activity
 		});
 		
 		session = new SessionManager(getApplicationContext());
-		// session.checkLogin();
+	
 
 		HashMap<String, String> user1 = session.getUserDetails();
 
-		// name
+	
 		String userid1 = user1.get(SessionManager.KEY_NAME);
 		
 		try
 	  	{
 	  	
-		//HttpPost httppost = new HttpPost("http://192.168.1.2:8080/Traffic_System/getspot.jsp");
-		
-		// HttpPost httppost = new HttpPost("http://122.166.104.51:8000/Traffic_System/getspot.jsp");
 		String response = null;
 		
 		

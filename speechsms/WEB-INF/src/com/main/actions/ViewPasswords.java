@@ -21,7 +21,7 @@ public class ViewPasswords extends HttpServlet
 		ResultSet rs = null;
 		int ucode =0,qnNo=0;
 		String passName;
-		String info = "Opps,No Passwords Found !!!!!";
+		String info = "No Password Found";
 		String output="",passsDetails="",username="",password="";
 	
 		
@@ -37,13 +37,13 @@ public class ViewPasswords extends HttpServlet
 			  AES_CBC_encryption_Decryption a=new AES_CBC_encryption_Decryption();
 			if(rs.next())
 			{
-			   rs.previous();//Moving To The Previous Row
+			   rs.previous();
 			   while(rs.next())
 			   {
 				   ucode = rs.getInt(1);
 				  
 				   passName = rs.getString(3);
-				  // passsDetails = rs.getString(4);
+				
 				   
 				 
 					
@@ -69,9 +69,9 @@ public class ViewPasswords extends HttpServlet
 		}
 		catch(Exception e)
 		{
-			System.out.println("Opps's Exception is in Admin->ViewUserFeedback Servlet : ");
+			System.out.println("Exception is in Admin->ViewUserFeedback Servlet : ");
 			e.printStackTrace();
-			out.println("Opps's Exception is in Admin->ViewUserFeedback Servlet : ");
+			out.println("Exception is in Admin->ViewUserFeedback Servlet : ");
 			e.printStackTrace();
 		}
 	}

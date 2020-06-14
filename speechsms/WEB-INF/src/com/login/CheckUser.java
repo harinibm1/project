@@ -16,7 +16,7 @@ public class CheckUser extends HttpServlet
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		super.doPost(req, resp);
 		String fl = null;
 		
@@ -28,8 +28,7 @@ public class CheckUser extends HttpServlet
 		String pass = req.getParameter("Pass");
 		String imei = req.getParameter("imei");
 		
-		//out.println("Name --->> "+name);
-		//out.println("Code --->> "+code);
+		
 		System.out.println("Name "+name);
 		System.out.println("Code "+pass);
 		
@@ -52,7 +51,7 @@ public class CheckUser extends HttpServlet
 		} 
 		catch (Exception e)
 		{
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		

@@ -36,22 +36,17 @@ public class ReminderService extends WakeReminderIntentService {
 		
 		PendingIntent pi = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_ONE_SHOT); 
 		
-	/*	Notification note=new Notification(android.R.drawable.stat_sys_warning, getString(R.string.notify_new_task_message), System.currentTimeMillis());
-		note.setLatestEventInfo(this, getString(R.string.notify_new_task_title), getString(R.string.notify_new_task_message), pi);
-		note.defaults |= Notification.DEFAULT_SOUND; 
-		note.flags |= Notification.FLAG_AUTO_CANCEL; */
+	
 		builder.setContentIntent(pi);  
 		builder.setAutoCancel(true);
 		builder.setLights(Color.BLUE, 500, 500);
 		long[] pattern = {500,500,500,500,500,500,500,500,500};
 		builder.setVibrate(pattern);
 		builder.setStyle(new NotificationCompat.InboxStyle());
-		// An issue could occur if user ever enters over 2,147,483,647 tasks. (Max int value). 
-		// I highly doubt this will ever happen. But is good to note. 
+		
 		
 		mgr.notify(1, builder.build());
-		/*int id = (int)((long)rowId);
-		mgr.notify(id, note); */
+		
 		Uri alarmSound = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
 		builder.setSound(alarmSound);
 		

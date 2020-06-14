@@ -1,9 +1,3 @@
-/**
- @Author : Amutha
- Date : Oct 9, 2013
- File : ChangePass.java
- Package : com.example.trafficsyatem
-*/
 package com.sesame;
 
 import java.util.ArrayList;
@@ -38,16 +32,16 @@ public class ChangePassword extends Activity
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+	
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.changepass);
 
 		session = new SessionManager(getApplicationContext());
-		// session.checkLogin();
+		
 
 		HashMap<String, String> user1 = session.getUserDetails();
 
-		// name
+	
 		String name2 = user1.get(SessionManager.KEY_NAME);
 		pass = user1.get(SessionManager.KEY_PWD);
 
@@ -66,7 +60,7 @@ public class ChangePassword extends Activity
 			@Override
 			public void onClick(View v)
 			{
-				// TODO Auto-generated method stub
+				
 				current_pass = c_pass.getText().toString();
 				new_pass = new_password.getText().toString();
 				confirmpa = con_pass.getText().toString();
@@ -112,7 +106,7 @@ public class ChangePassword extends Activity
 
 					try {
 						
-						// HttpPost httppost = new HttpPost("http://122.166.104.51:8000/Traffic_System/changepass.jsp");
+				
 						
 						response = CustomHttpClient.executeHttpPost(Global.URL+"speechsms/changepass.jsp", nameValuePairs);
 

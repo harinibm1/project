@@ -35,7 +35,7 @@ public class OTPCheck extends Activity
 	 String uname;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-	// TODO Auto-generated method stub
+	
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.change_masterpass);
 	final Context context = this;
@@ -58,15 +58,15 @@ protected void onCreate(Bundle savedInstanceState) {
 		  new DialogInterface.OnClickListener() {
 		    public void onClick(DialogInterface dialog,int id) {
 			// get user input and set it to result
-			// edit text
+		
 		    	String otp=userInput.getText().toString();
 		    	System.out.println("OTP is :"+otp);
 		    	
 		    	Bundle bundle = getIntent().getExtras();
 
-		    	//Extract the data…
+		    
 		    	 pass = bundle.getString("otp");
-			//result.setText(userInput.getText());
+			
 		    	
 		    	if(pass.equals(otp))
 		    	{
@@ -76,11 +76,11 @@ protected void onCreate(Bundle savedInstanceState) {
 		    		btn=(Button) findViewById(R.id.changebtn);
 		    		
 		    		 session = new SessionManager(getApplicationContext());
-		    	        // session.checkLogin();
+		    	   
 		    	        
 		    	        HashMap<String, String> user = session.getUserDetails();
 		    	        
-		    	        // name
+		    	       
 		    	         name = user.get(SessionManager.KEY_KEY);
 		    	         uname=user.get(SessionManager.KEY_NAME);
 		    	         System.out.println("uname in otp check>>>>>>>>>>>>>>>>>>>>>>"+uname);
@@ -135,7 +135,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 								try {
 									
-									// HttpPost httppost = new HttpPost("http://122.166.104.51:8000/Traffic_System/changepass.jsp");
+									
 									
 									ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 									nameValuePairs.add(new BasicNameValuePair("uid", uname));
@@ -201,10 +201,10 @@ protected void onCreate(Bundle savedInstanceState) {
 		    }
 		  });
 
-	// create alert dialog
+	
 	AlertDialog alertDialog = alertDialogBuilder.create();
 
-	// show it
+
 	alertDialog.show();
 
 	

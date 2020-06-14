@@ -54,7 +54,7 @@ public class SignUpActivity extends Activity {
 
 		
 
-		// Get Refferences of Views
+	
 
 		exception = (TextView) findViewById(R.id.validate);
 		userid = (EditText) findViewById(R.id.loginid);
@@ -68,40 +68,38 @@ public class SignUpActivity extends Activity {
 		userphone2 = (EditText) findViewById(R.id.mobile2);
 		cpass = (EditText) findViewById(R.id.cpassword);
 
-		// =========================================================================================================
+		
 		username.addTextChangedListener(new TextWatcher()
 		{
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
 					int count) {
-				// TODO Auto-generated method stub
+			
 
 			}
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
-				// TODO Auto-generated method stub
+				
 
 			}
 
 			@Override
 			public void afterTextChanged(Editable s) {
-				// TODO Auto-generated method stub
+			
 				Is_Valid_Person_Name(username);
 			}
 		});
 
-		// userphone.addTextChangedListener(new
-		// PhoneNumberFormattingTextWatcher());
+		
 
 		btnCreateAccount = (Button) findViewById(R.id.reg);
 
 		btnCreateAccount.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 
 				
 				String id = userid.getText().toString();
@@ -227,7 +225,7 @@ public class SignUpActivity extends Activity {
 				 String otpmessage="Dear  "+name.trim()+" your OTP is "+otpp.trim();
 				 
 				   sendSMS(phone.trim(), otpmessage.trim());
-						//System.out.println("User Status Check..."+response.trim().equals("True"));
+					
 						
 						Toast.makeText(getApplicationContext(),
 								"You have Registered Successfully  ",
@@ -268,7 +266,7 @@ public class SignUpActivity extends Activity {
 		    
 		    Toast.makeText(getApplicationContext(),	" SMS Sent Successfully",Toast.LENGTH_SHORT).show();
 		}
-	// =========================================================================================================
+
 	public void Is_Valid_Person_Name(EditText edt) throws NumberFormatException {
 		if (edt.getText().toString().length() <= 0) {
 			edt.setError("Accept Alphabets Only.");

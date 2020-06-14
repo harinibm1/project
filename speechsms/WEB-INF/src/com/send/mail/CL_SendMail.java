@@ -63,7 +63,7 @@ public class CL_SendMail {
 
 			msg.setRecipient(Message.RecipientType.TO, addressTo);
 
-			// Setting the Subject and Content Type
+		
 			
 			msg.setSubject(subject);
 			msg.setContent(message, "text/plain");
@@ -174,18 +174,14 @@ public class CL_SendMail {
 				catch(SendFailedException sendingfailed)
 				{
 					flag=false;
-					//Address[] invalidaddress=sendingfailed.getInvalidAddresses();
 					
-					//System.out.println("Total Number of Invalid Address "+invalidaddress);
 					
 				}
 				catch (MessagingException e1) 
 				{
 					
 						flag=false;
-						//e2.printStackTrace();
-						//TestLog.writeException(e2);
-					
+						
 				}
 				
 		 	

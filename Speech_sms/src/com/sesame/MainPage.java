@@ -2,13 +2,9 @@ package com.sesame;
 
 import java.io.BufferedReader;
 import java.util.ArrayList;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
-
 import com.HttpClient.CustomHttpClient;
-
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
@@ -36,17 +32,17 @@ public class MainPage extends Activity
 
 	    
 
-	     // Get The Refference Of Buttons
+	   
 	     btnSignIn=(Button)findViewById(R.id.login);
 	     btnSignUp=(Button)findViewById(R.id.reg);
 	     btnRecovery=(Button)findViewById(R.id.passrecovery);
 
-	    // Set OnClick Listener on SignUp button 
+	 
 	    btnSignUp.setOnClickListener(new View.OnClickListener() {
 		public void onClick(View v) {
-			// TODO Auto-generated method stub
+		
 
-			/// Create Intent for SignUpActivity  abd Start The Activity
+		
 			System.out.println("New User");
 			Intent intentSignUP=new Intent(getApplicationContext(),SignUpActivity.class);
 			startActivity(intentSignUP);
@@ -57,12 +53,12 @@ public class MainPage extends Activity
 	    
 	    
 	    
-	 // Set OnClick Listener on Log In button 
+	
 	    btnSignIn.setOnClickListener(new View.OnClickListener() {
 		public void onClick(View v) {
-			// TODO Auto-generated method stub
+			
 
-			/// Create Intent for SignUpActivity  abd Start The Activity
+			
 			System.out.println("User Login");
 			
 			Intent intentSignUP=new Intent(MainPage.this,Login1.class);
@@ -71,9 +67,8 @@ public class MainPage extends Activity
 		});
 	    btnRecovery.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-				/// Create Intent for SignUpActivity  abd Start The Activity
+			
+				
 				System.out.println("User Login");
 				
 				Intent intentSignUP=new Intent(MainPage.this,Login2.class);

@@ -13,7 +13,7 @@
 	boolean flag = false;
 
 	StringBuffer sb = null;
-	String info = "Opps,Something Went Wrong Try Again..";%>
+	String info = "Something Went Wrong Try Again..";%>
 
 <%
 	sb = new StringBuffer();
@@ -23,19 +23,19 @@
 	String info = "Valid User";
 	String info1 = "InValid User";
 
-	/* Get Spot Information */
+
 
 	String userid = request.getParameter("Userid");
 		StringBuffer  sb = new StringBuffer();
 		String userinfo = "";
 		ArrayList<String> list = adduserdao.getUserinfo(userid);
 
-		System.out.println("Get Spot Information ");
+
 		for(int i = 0;i<list.size();i++)
 		{
 			userinfo = list.get(i);
 			sb.append(userinfo+"~");
-			System.out.println("Spot Val ??? "+userinfo);
+			System.out.println(userinfo);
 		}
 
 

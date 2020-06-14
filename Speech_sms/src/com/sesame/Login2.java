@@ -1,29 +1,13 @@
-/**
- @Author : Palani Kannan
- 
-*/
-
-
 package com.sesame;
 
 import java.io.BufferedReader;
-
 import java.util.ArrayList;
-
-
 import org.apache.http.NameValuePair;
-
 import org.apache.http.message.BasicNameValuePair;
-
 import com.HttpClient.CustomHttpClient;
-
-
-
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.telephony.TelephonyManager;
@@ -37,7 +21,7 @@ import android.widget.Toast;
 
 public class Login2 extends Activity
 {
-	//public static final String url = "http://192.168.1.3:8080/SampleApp/GetDataFromAndroid";
+	
 	String userName="", passWord="";
 	EditText username, password;
 	String output1="";
@@ -54,9 +38,9 @@ public class Login2 extends Activity
 	 String c = "Valid User";
 		String c1 = "InValid User";
 	 
-	// public static final String URL ="http://192.168.1.2:8080/Traffic_System/checkuser.jsp";
+
 	 
-	/** Called when the activity is first created. */
+	//Called when the activity is first created. 
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -71,7 +55,7 @@ public class Login2 extends Activity
 			}
 		session = new SessionManager(getApplicationContext());
 		
-		// UI elements gets bind in form of Java Objects
+		
 		username = (EditText) findViewById(R.id.loginid);
 		password = (EditText) findViewById(R.id.password);
 		login = (Button) findViewById(R.id.login);
@@ -83,7 +67,7 @@ public class Login2 extends Activity
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				
 				userName = username.getText().toString();
 				passWord = password.getText().toString();
@@ -108,14 +92,14 @@ public class Login2 extends Activity
 					String device_id = tm.getDeviceId();
 					
 					 BufferedReader in = null;
-						// Add your data
+					
 						System.out.println("Add Data");
 						ArrayList<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
 						
 						nameValuePairs.add(new BasicNameValuePair("Name", userName));
 						nameValuePairs.add(new BasicNameValuePair("Pass", passWord));
 						nameValuePairs.add(new BasicNameValuePair("imei", device_id));
-						//nameValuePairs.add(new BasicNameValuePair("OTP", onetimep));
+					
 						
 						
 						// Execute HTTP Post Request
@@ -138,13 +122,7 @@ public class Login2 extends Activity
 								startActivity(intent);
 							}
 							
-							/*else if(response.trim().equalsIgnoreCase(c.trim()))
-							{
-								Toast.makeText(getApplicationContext(), "User Logged In Successfully", Toast.LENGTH_LONG).show();
-								Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
-								startActivity(intent);
-							}
-							*/ 
+							 
 						
 							username.setText("");
 							password.setText("");
@@ -153,7 +131,7 @@ public class Login2 extends Activity
 						 } 
 						 catch (Exception e)
 						 {
-							// TODO Auto-generated catch block
+							
 							e.printStackTrace();
 							textView.setText(e.toString());
 						}

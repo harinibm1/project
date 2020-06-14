@@ -23,7 +23,7 @@ public class admindao extends HttpServlet {
 
     public admindao() {
         super();
-        // TODO Auto-generated constructor stub
+       
     }
 
     public static int logindao(String adminid, String adminpass) throws SQLException
@@ -41,7 +41,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql="select admin_id,admin_password from m_admin where admin_id='"+adminid+"' and admin_password='"+adminpass+"'";
 			
@@ -81,7 +81,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			rs = stmt.executeQuery("select * from m_admin where admin_id='"+name+"' and admin_password='"+pass+"'");
 			while(rs.next())
@@ -92,7 +92,7 @@ public class admindao extends HttpServlet {
 		}
 		catch(Exception e)
 		{
-			System.out.println("Opp's Error is in AdminDAO.loginCHK()....."+e);
+			System.out.println("Error is in AdminDAO.loginCHK()....."+e);
 		}
 		return flag;
 	}
@@ -113,7 +113,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 			
 			stmt.executeUpdate("update m_admin set admin_password='"+newpwd+"' where admin_id='"+adminid+"'");
 			flg = true;
@@ -147,7 +147,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 			
 			n2=stmt.executeUpdate("update m_user set u_login_id='"+adminid+"',u_name='"+name+"',u_city='"+city+"',u_mobile='"+mobile+"' where u_code='"+code+"'");
 			
@@ -185,7 +185,7 @@ public class admindao extends HttpServlet {
    			System.out.println("Connection Established !");
 
    			stmt=con.createStatement();
-   			System.out.println("Statment Established !");
+   			System.out.println("Statement Established !");
    			
    			n2=stmt.executeUpdate("update m_cloud set c_name='"+name+"',c_url='"+url+"',c_uname='"+uname+"',c_pwd='"+pass+"' where c_code='"+code+"'");
    			
@@ -223,7 +223,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 			
 			String sql = "delete from m_user where u_code='"+id+"'";
 			System.out.println(sql);
@@ -236,7 +236,7 @@ public class admindao extends HttpServlet {
 		}
 		catch(Exception e)
 		{
-			System.out.println("Opp's Error is in AdminDAO-deleteUser()....."+e);
+			System.out.println("Error is in AdminDAO-deleteUser()....."+e);
 		}
 		return flag;
 	}
@@ -255,7 +255,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 			
 			String sql = "delete from m_password where user_code='"+id+"'";
 			System.out.println(sql);
@@ -268,7 +268,7 @@ public class admindao extends HttpServlet {
 		}
 		catch(Exception e)
 		{
-			System.out.println("Opp's Error is in AdminDAO-deleteUser()....."+e);
+			System.out.println(" Error is in AdminDAO-deleteUser()....."+e);
 		}
 		return flag;
 	}
@@ -289,7 +289,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql="select admin_name from m_admin where admin_id='"+adminid+"'";
 			
@@ -328,7 +328,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql="select *from m_user";
 			
@@ -359,7 +359,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql="select *from m_cloud";
 			
@@ -390,7 +390,7 @@ public class admindao extends HttpServlet {
 			System.out.println("Connection Established !");
 
 			stmt=con.createStatement();
-			System.out.println("Statment Established !");
+			System.out.println("Statement Established !");
 
 			String sql="select *from m_password";
 			
@@ -419,10 +419,10 @@ public class admindao extends HttpServlet {
    			serverconnector obj=new serverconnector();
 
    			con = obj.connector();
-   			//System.out.println("Connection Established !");
+   		
 
    			stmt=con.createStatement();
-   			System.out.println("Statment Established !");
+   			System.out.println("Statement Established !");
 
    			String sql="select u_name from m_user where u_code='"+uid+"'";
    			

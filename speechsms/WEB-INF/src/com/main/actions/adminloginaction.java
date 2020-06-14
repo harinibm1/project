@@ -21,18 +21,12 @@ public class adminloginaction extends HttpServlet
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
-		//System.out.println("doPost");
         int flag=0;
         String name="";
         RequestDispatcher rd;
 		HttpSession hs1=request.getSession();
 		
-		String context = getServletContext().getInitParameter("dhs");
-		String config = getServletConfig().getInitParameter("foo");
-
-		System.out.println("---------------------------------------------------------------");
-		System.out.println(context+" || "+config);
-
+		
         try {
 		String admin_id=request.getParameter("name");
 		String admin_password=request.getParameter("pass");
@@ -54,7 +48,6 @@ public class adminloginaction extends HttpServlet
         }
        
         } catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally { 
             out.close();

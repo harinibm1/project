@@ -56,7 +56,7 @@ public class PasswordsList extends Activity
 	
 	 Map<String,String> map = null;
 	
-	/** Called when the activity is first created. */
+	//Called when the activity is first created. //
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
@@ -81,11 +81,11 @@ public class PasswordsList extends Activity
         try 
         {
         	session = new SessionManager(getApplicationContext());
-    		// session.checkLogin();
+    		
 
     		HashMap<String, String> user1 = session.getUserDetails();
 
-    		// name
+    	
     		String userid1 = user1.get(SessionManager.KEY_NAME);
     		
 			String response = null;
@@ -101,10 +101,10 @@ public class PasswordsList extends Activity
         	    
         	    System.out.println("passwords List Response :\n"+res);
         	    
-        	    if(res.equals("Opps,No passwords Found !!!!!"))
+        	    if(res.equals("No passwords Found !!!!!"))
         	    {
-        	    	DialogUtils.displayErrorDialog(PasswordsList.this, "Opps,No Passwords Found!!!!!", "Thank You..");
-					Toast.makeText(getApplicationContext(), "Opps,No Passwords Found !!!!!", Toast.LENGTH_LONG).show();
+        	    	DialogUtils.displayErrorDialog(PasswordsList.this, "No Passwords Found!!!!!", "Thank You..");
+					Toast.makeText(getApplicationContext(), "No Passwords Found !!!!!", Toast.LENGTH_LONG).show();
 					
         	    }
         	    else
@@ -115,11 +115,11 @@ public class PasswordsList extends Activity
 			}
 			catch (Exception e)
 			{
-				System.out.println("Opps,Something Went Wrong While getting the Passwords List: ");
+				System.out.println("Something Went Wrong While getting the Passwords List: ");
 				e.printStackTrace();
 			}
 			
-			// Getting The Feedback Question List (Starts)
+		
 			
         	
             result = res.split("~");
@@ -186,7 +186,7 @@ public class PasswordsList extends Activity
 		} 
         catch (Exception e) 
         {
-			System.out.println("Opps,Something Went Wrong In FeedBackQnList Activity :");
+			System.out.println("Something Went Wrong In FeedBackQnList Activity :");
 			e.printStackTrace();
 		}
         
@@ -269,7 +269,7 @@ public class PasswordsList extends Activity
 				}
 				catch (Exception e)
 				{
-					System.out.println("Opps,Something Went Wrong While getting the Feedback Count : ");
+					System.out.println("Something Went Wrong While getting the Feedback Count : ");
 					e.printStackTrace();
 				}
     			
@@ -296,5 +296,5 @@ public class PasswordsList extends Activity
         		break;
         }
     return dialog;
-     }//Change Password() Ends
+     }
 }

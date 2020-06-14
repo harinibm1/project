@@ -49,11 +49,11 @@ String s=null;
         @Override
      	 public void onClick(View v) {
         	
-        	//Toast.makeText(getApplicationContext(), "OnClick", 500).show();
+        	
 			
         	if(isConnected())
         	{
-        		//Toast.makeText(getApplicationContext(), "isConnected ", 500).show();
+        	
     			
         	 Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
          	 intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
@@ -107,10 +107,7 @@ String s=null;
 			nameValuePairs.add(new BasicNameValuePair("word", s));
 			nameValuePairs.add(new BasicNameValuePair("name", userid1));
 			
-			//nameValuePairs.add(new BasicNameValuePair("OTP", onetimep));
 			
-			
-			// Execute HTTP Post Request
 			 try
 			 {
 				response = CustomHttpClient.executeHttpPost(Global.URL+"speechsms/getSinglePassword.jsp", nameValuePairs);
@@ -119,7 +116,7 @@ String s=null;
 				
 				if(response.trim().equals("nopassword"))
 				{
-					Toast.makeText(getApplicationContext(), "No Password Found Please Try Different Words...!", 500).show();
+					Toast.makeText(getApplicationContext(), "No Password Found Please Try Again...!", 500).show();
 					
 					Intent intent = new Intent(getApplicationContext(), Voiceprocess.class);
 					startActivity(intent);
@@ -137,7 +134,7 @@ String s=null;
 			 } 
 			 catch (Exception e)
 			 {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 				
 			}

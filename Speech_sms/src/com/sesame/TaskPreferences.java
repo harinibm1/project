@@ -14,7 +14,7 @@ public class TaskPreferences extends PreferenceActivity {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.task_preferences);
 
-		// Set the time default to a numeric number only
+
 		EditTextPreference timeDefault = (EditTextPreference) findPreference(getString(R.string.pref_default_time_from_now_key)); 	
 		timeDefault.getEditText().setKeyListener(DigitsKeyListener.getInstance()); 
 	}

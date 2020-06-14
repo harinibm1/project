@@ -52,17 +52,17 @@ public class deleteuseraction extends HttpServlet {
 			}
 
         } catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} finally { 
             out.close();
         }
     } 
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+  
     /** 
      * Handles the HTTP <code>GET</code> method.
      * @param request servlet request

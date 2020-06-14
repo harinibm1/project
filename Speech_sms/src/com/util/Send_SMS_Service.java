@@ -1,9 +1,5 @@
-// Decompiled by DJ v3.2.2.67 Copyright 2002 Atanas Neshkov  Date: 07/03/2011 11:50:32 AM
-// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
-// Decompiler options: packimports(3) 
-// Source File Name:   Send_SMS_Service.java
-
 package com.util;
+
 import java.io.*;
 import java.net.*;
 
@@ -21,9 +17,9 @@ public class Send_SMS_Service
         {
         	String postData = "";
 		    String retval = "";
-		    String User = "blrstore";
-		    String passwd = "dhscvs123";
-		    String sid = "dhs";
+		    String User = "abc";
+		    String passwd = "abc123";
+		    String sid = "abc";
 		    String mtype = "N";
 		    String DR = "Y";
 		    
@@ -62,7 +58,7 @@ public class Send_SMS_Service
     public static void main(String args[])
         throws Exception
     {
-        boolean flag = sendSMS("9886692401", "This is test sms from Praveen DHS");
+        boolean flag = sendSMS("9786786543", "TEST SMS");
         if(flag)
             System.out.println("SMS Sent Successfully !");
         else

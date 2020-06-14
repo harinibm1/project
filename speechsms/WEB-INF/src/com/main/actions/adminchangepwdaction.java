@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.main.actions;
 
 import java.io.IOException;
@@ -38,7 +36,7 @@ public class adminchangepwdaction extends HttpServlet
 				String admin=request.getParameter("admin");
 				request.setAttribute("admin", admin);
 				
-				//DAO dao=DAO.getInstance();
+			
 				boolean result=admindao.loginCHK(admin, pass);
 				if(result)
 				{
@@ -72,8 +70,8 @@ public class adminchangepwdaction extends HttpServlet
 		}
 		catch(Exception e)
 		{
-			System.out.println("Opps's Error is in Admin ChangePass Servlet......"+e);
-			out.println("Opps's Error is in Admin ChangePass Servlet......"+e);
+			System.out.println("Error is in Admin ChangePass Servlet......"+e);
+			out.println("Error is in Admin ChangePass Servlet......"+e);
 		}
 	}
 }

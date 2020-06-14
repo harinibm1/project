@@ -24,7 +24,7 @@ public class ReminderListActivity extends ListActivity {
     
     private RemindersDbAdapter mDbHelper;
     
-    /** Called when the activity is first created. */
+    //Called when the activity is first created.//
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +41,13 @@ public class ReminderListActivity extends ListActivity {
         Cursor remindersCursor = mDbHelper.fetchAllReminders();
         startManagingCursor(remindersCursor);
         
-        // Create an array to specify the fields we want to display in the list (only TITLE)
+        // Create an array to specify the fields to display in the list (only TITLE)
         String[] from = new String[]{RemindersDbAdapter.KEY_TITLE};
         
-        // and an array of the fields we want to bind those fields to (in this case just text1)
+        // and an array of the fields to bind those fields to (in this case just text1)
         int[] to = new int[]{R.id.text1};
         
-        // Now create a simple cursor adapter and set it to display
+      
         SimpleCursorAdapter reminders = 
         	    new SimpleCursorAdapter(this, R.layout.reminder_row, remindersCursor, from, to);
         setListAdapter(reminders);

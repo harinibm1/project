@@ -1,8 +1,3 @@
-/**
-Palani kanan
-*/
-
-
 package com.sesame;
 
 import java.io.BufferedReader;
@@ -25,12 +20,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-
 import com.HttpClient.CustomHttpClient;
-
-
-
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -47,7 +37,7 @@ import android.widget.Toast;
 
 public class OneTimePass2 extends Activity
 {
-	//public static final String url = "http://192.168.1.3:8080/SampleApp/GetDataFromAndroid";
+	
 	String onetimepass="";
 	
 	EditText otp;
@@ -63,9 +53,9 @@ public class OneTimePass2 extends Activity
 	 String c = "Valid User";
 		String c1 = "InValid User";
 	 
-	// public static final String URL ="http://192.168.1.2:8080/Traffic_System/checkuser.jsp";
+	
 	 
-	/** Called when the activity is first created. */
+	//Called when the activity is first created. 
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -75,7 +65,7 @@ public class OneTimePass2 extends Activity
 		
 		Bundle bundle = getIntent().getExtras();
 
-		//Extract the data…
+	
 		 userid = bundle.getString("userid");        
 		
 		
@@ -90,7 +80,7 @@ public class OneTimePass2 extends Activity
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+			
 				
 				onetimepass = otp.getText().toString();
 				
@@ -105,7 +95,7 @@ public class OneTimePass2 extends Activity
 				{
 					
 					 BufferedReader in = null;
-						// Add your data
+					
 						System.out.println("Add Data");
 						TelephonyManager tm = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
 						String device_id = tm.getDeviceId();
@@ -143,7 +133,7 @@ public class OneTimePass2 extends Activity
 						 } 
 						 catch (Exception e)
 						 {
-							// TODO Auto-generated catch block
+							
 							e.printStackTrace();
 							textView.setText(e.toString());
 						}

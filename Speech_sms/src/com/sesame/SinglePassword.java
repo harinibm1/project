@@ -14,13 +14,13 @@ public class SinglePassword extends Activity
 	Button btn;
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-	// TODO Auto-generated method stub
+	
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.view_singlepass);
 	
 	Bundle bundle = getIntent().getExtras();
 
-	//Extract the data…
+
 	String pass = bundle.getString("pass");  
 	String[] data=pass.split("~");
 	

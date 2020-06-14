@@ -25,7 +25,7 @@ public class Utility
 		} 
 		catch (Exception e) 
 		{
-			System.out.println("Opps,Something Went Wrong in DateUtil=>isEventDateAfterFeedbackLastDate(String eventDate,String feedBackDate)");
+			System.out.println(e);
 		}
 		return flag;
 	}
@@ -33,9 +33,9 @@ public class Utility
 	public static String ValidateName(String name)
     {
 	   	String msg="valid";
-	   	Pattern pattern = Pattern.compile("\\d[0-9]*"); /*  \\d = only digit allow   */
+	   	Pattern pattern = Pattern.compile("\\d[0-9]*"); 
 	    Matcher matcher = pattern.matcher(name);
-	    // Digits Are Not Allowed in Name
+	 
 	    if (matcher.matches()) 
 	    {
 	          System.out.println("Numbers Are not Allowed in Name");
@@ -64,7 +64,7 @@ public class Utility
     {
 	   	 int flag=0;
 	   	 
-	   	Pattern pattern = Pattern.compile("\\d{10}"); /*  \\d = only digit allow   {10} = length  */
+	   	Pattern pattern = Pattern.compile("\\d{10}"); 
 	    Matcher matcher = pattern.matcher(number);
 	    if (matcher.matches()) 
 	    {
@@ -81,8 +81,8 @@ public class Utility
 	public static int ValidatePhoneNumber(String number)
     {
 	   	 int flag=0;
-	   	// Formate xxx-xxxxxxx(605-8889999) 
-	   	Pattern pattern = Pattern.compile("\\d{3}-\\d{7}"); /*  \\d = only digit allow   {10} = length  */
+	   
+	   	Pattern pattern = Pattern.compile("\\d{3}-\\d{7}"); 
 	    Matcher matcher = pattern.matcher(number);
 	    if (matcher.matches()) 
 	    {
@@ -105,7 +105,7 @@ public class Utility
     	 String at="@";
     	 String dot=".";
     	 String com="com";
-    	 String str="#$%^&*!+=/\\}]{[~`?/<>,"; // \\ i.e \ in windows
+    	 String str="#$%^&*!+=/\\}]{[~`?/<>,"; 
     	 String str1="0123456789@.";
     	 String str2=".com";
     	 String str3=".co.in";
@@ -146,7 +146,7 @@ public class Utility
               }
         }
          
-         // "@" should allow only once
+         // "@" should be allowed only once
          for(int i=0;i<l;i++)
          {
              if(email.charAt(i)==at.charAt(0))
@@ -168,7 +168,7 @@ public class Utility
     	return flag;
      }
 	 
-	 /* Getting The Date and Times */
+	 // Getting The Date and Time 
 	 
 	 public static String getDate()
 		{
@@ -181,7 +181,7 @@ public class Utility
 			}
 			catch(Exception e)
 			{
-				System.out.println("Exception in UserDAO-->getDate( ): "+ e);
+				System.out.println(e);
 			}
 			return date;
 		}
@@ -196,7 +196,7 @@ public class Utility
 			}
 			catch(Exception e)
 			{
-				System.out.println("Exception in UserDAO-->getTime( ): "+ e);
+				System.out.println(e);
 			}
 			return time;
 		}
@@ -224,7 +224,7 @@ public class Utility
 			}
 			catch(Exception e)
 			{
-				System.out.println("Exception in UserDAO-->getDay( ): "+ e);
+				System.out.println(e);
 			}
 			return day;
 		}

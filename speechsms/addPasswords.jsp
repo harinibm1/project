@@ -16,7 +16,7 @@
 	boolean flag = false;
 
 	StringBuffer sb = null;
-	String info = "Opps,Something Went Wrong Try Again..";%>
+	String info = "Something Went Wrong Try Again..";%>
 
 <%
 	sb = new StringBuffer();
@@ -61,11 +61,11 @@ String ucode = String.valueOf(eventId);
 	if(flag)
 	{
 		sb.append(info);
-		System.out.println("true flage blocke :"+info);
+		System.out.println("true flage block :"+info);
 	}else
 	{
 		sb.append(info1);
-		System.out.println("false flage blocke");
+		System.out.println("false flage block");
 	}
 
 	out.println(sb.toString()); //Sending Response to Android App

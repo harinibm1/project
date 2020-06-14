@@ -1,7 +1,5 @@
 package com.sesame;
 
-
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.telephony.PhoneNumberFormattingTextWatcher;
@@ -30,82 +28,81 @@ public class ValidationScreen extends Activity
                 phone_number = (EditText) findViewById(R.id.phone_number);
                 sign_number = (EditText) findViewById(R.id.sign_number);
 
-                // =========================================================================================================
+              
                 name.addTextChangedListener(new TextWatcher() {
 
                         @Override
                         public void onTextChanged(CharSequence s, int start, int before,
                                         int count) {
-                                // TODO Auto-generated method stub
+                          
 
                         }
 
                         @Override
                         public void beforeTextChanged(CharSequence s, int start, int count,
                                         int after) {
-                                // TODO Auto-generated method stub
+                           
 
                         }
 
                         @Override
                         public void afterTextChanged(Editable s) {
-                                // TODO Auto-generated method stub
+                               
                                 Is_Valid_Person_Name(name);
                         }
                 });
-                // =========================================================================================================
+              
                 email.addTextChangedListener(new TextWatcher() {
 
                         @Override
                         public void onTextChanged(CharSequence s, int start, int before,
                                         int count) {
-                                // TODO Auto-generated method stub
+                              
 
                         }
 
                         @Override
                         public void beforeTextChanged(CharSequence s, int start, int count,
                                         int after) {
-                                // TODO Auto-generated method stub
+                               
 
                         }
 
                         @Override
                         public void afterTextChanged(Editable s) {
-                                // TODO Auto-generated method stub
+                             
                                 Is_Valid_Email(email);
                         }
                 });
 
-                // =========================================================================================================
+             
 
                 phone_number.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
-                // =========================================================================================================
+             
 
                 sign_number.addTextChangedListener(new TextWatcher() {
 
                         @Override
                         public void onTextChanged(CharSequence s, int start, int before,
                                         int count) {
-                                // TODO Auto-generated method stub
+                              
 
                         }
 
                         @Override
                         public void beforeTextChanged(CharSequence s, int start, int count,
                                         int after) {
-                                // TODO Auto-generated method stub
+                            
 
                         }
 
                         @Override
                         public void afterTextChanged(Editable s) {
-                                // TODO Auto-generated method stub
+                               
                                 Is_Valid_Sign_Number_Validation(1, 10, sign_number);
                         }
                 });
-                // =========================================================================================================
-                // auto complete text
+               
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                                 android.R.layout.simple_dropdown_item_1line, devplatforms);
 
@@ -114,10 +111,10 @@ public class ValidationScreen extends Activity
                 
                 
                 actvDev.setAdapter(adapter);
-                // =========================================================================================================
+               
         }
 
-        // =========================================================================================================
+       
         public void Is_Valid_Person_Name(EditText edt) throws NumberFormatException
         {
                 if (edt.getText().toString().length() <= 0)
@@ -133,7 +130,7 @@ public class ValidationScreen extends Activity
 
         }
 
-        // =========================================================================================================
+   
         public void Is_Valid_Email(EditText edt) {
                 if (edt.getText().toString() == null)
                 {
@@ -149,9 +146,9 @@ public class ValidationScreen extends Activity
 
         boolean isEmailValid(CharSequence email) {
                 return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
-        } // end of email matcher
+        } 
 
-        // =========================================================================================================
+      
 
         public void Is_Valid_Sign_Number_Validation(int MinLen, int MaxLen,
                         EditText edt) throws NumberFormatException {
@@ -164,10 +161,9 @@ public class ValidationScreen extends Activity
                         valid_sign_number = null;
                 } else {
                         valid_sign_number = edt.getText().toString();
-                        // Toast.makeText(getApplicationContext(),
-                        // ""+edt.getText().toString(), Toast.LENGTH_LONG).show();
+                        
                 }
 
-        } // END OF Edittext validation
+        } 
 
 }

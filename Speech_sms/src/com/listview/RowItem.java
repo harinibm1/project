@@ -1,10 +1,3 @@
-/**
- @Author : Palani Kannan
- Date : Aug 28, 2015
- File : RowItem.java
- Package : com
- */
-
 package com.listview;
 
 public class RowItem {

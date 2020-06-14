@@ -20,7 +20,7 @@ import org.apache.http.params.HttpParams;
 public class CustomHttpClient {
 	/** The time it takes for our client to timeout */
     public static final int HTTP_TIMEOUT = 40 * 1000; // milliseconds
-   // public static final int HTTP_TIMEOUT = 40 * 1000000000; // milliseconds
+  
 
     /** Single instance of our HttpClient */
     private static HttpClient mHttpClient;
@@ -79,7 +79,7 @@ public class CustomHttpClient {
             String result = sb.toString();
          
            
-            //System.out.println("Result :"+line.trim());
+           
             return result.trim();
         } finally {
             if (in != null) {
@@ -92,13 +92,7 @@ public class CustomHttpClient {
         }
     }
 
-    /**
-     * Performs an HTTP GET request to the specified url.
-     *
-     * @param url The web address to post the request to
-     * @return The result of the request
-     * @throws Exception
-     */
+    
     public static String executeHttpGet(String url) throws Exception {
         BufferedReader in = null;
         try {
