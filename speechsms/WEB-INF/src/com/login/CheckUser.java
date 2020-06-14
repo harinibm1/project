@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.dhs.DAO.adduserdao;
+import com.DAO.adduserdao;
 
 public class CheckUser extends HttpServlet
 {

@@ -1,9 +1,9 @@
 
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.dhs.DAO.adduserdao"%>
+<%@page import="com.DAO.adduserdao"%>
 <%@page import="com.actions.*"%>
 <%@page import="com.login.*"%>
-<%@page import="com.dhs.DAO.adduserdao.*"%>
+<%@page import="com.DAO.adduserdao.*"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*"%>
 

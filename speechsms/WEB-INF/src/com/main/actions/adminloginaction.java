@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dhs.DAO.admindao;
+import com.DAO.admindao;
 
 /**
  * Servlet implementation class adminloginaction

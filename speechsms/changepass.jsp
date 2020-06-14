@@ -1,8 +1,8 @@
 
-<%@page import="com.dhs.DAO.adduserdao"%>
+<%@page import="com.DAO.adduserdao"%>
 <%@page import="com.actions.*"%>
 <%@page import="com.login.*"%>
-<%@page import="com.dhs.DAO.adduserdao.*"%>
+<%@page import="com.DAO.adduserdao.*"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*"%>
 
@@ -32,7 +32,7 @@ loginusr = request.getParameter("loginUser");
 	String checkall = "Please Enter All The Fields";
 
 	/* Check User */
-	
+
 	boolean f = adduserdao.checkCurrentpass(loginusr, oldpass);
 	if(f)
 	{
@@ -43,16 +43,16 @@ loginusr = request.getParameter("loginUser");
 
 		} else {
 
-			
+
 		}
-		
+
 	}
 	else
 	{
 		sb.append(info1);
 	}
-	
-	
+
+
 
 	System.out.println("   Old Pass: " + oldpass);
 	System.out.println("  New Password : " + newpass);
@@ -62,8 +62,7 @@ loginusr = request.getParameter("loginUser");
 	System.out.println(sb.toString());
 
 	out.println(sb.toString()); //Sending Response to Android App
-	
-	
-	
-%>
 
+
+
+%>

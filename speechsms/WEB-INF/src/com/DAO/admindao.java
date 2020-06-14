@@ -1,4 +1,4 @@
-package com.dhs.DAO;
+package com.DAO;
 
 import java.io.IOException;
 import java.sql.Connection;
