@@ -146,7 +146,7 @@ System.out.println("No :"+no);
 		
 			<div  style="position: absolute;top: 550px;left: 500px;color: #8B4513;font-size: 20px; ">	
 		<script type="text/javascript">
-		 $().toastmessage('showErrorToast', "Oops,Something went wrong ..!");
+		 $().toastmessage('showErrorToast', "Opp's,Something went wrong ..!");
 		
 		</script></div>		
 		<%}

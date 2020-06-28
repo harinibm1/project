@@ -1,9 +1,9 @@
 
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.DAO.adduserdao"%>
+<%@page import="com.database.DAO.adduserdao"%>
 <%@page import="com.actions.*"%>
 <%@page import="com.login.*"%>
-<%@page import="com.DAO.adduserdao.*"%>
+<%@page import="com.database.DAO.adduserdao.*"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*"%>
 
@@ -13,7 +13,7 @@
 	boolean flag = false;
 
 	StringBuffer sb = null;
-	String info = "Something Went Wrong Try Again..";%>
+	String info = "Opps,Something Went Wrong Try Again..";%>
 
 <%
 	sb = new StringBuffer();

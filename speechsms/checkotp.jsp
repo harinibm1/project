@@ -1,8 +1,8 @@
 
-<%@page import="com.DAO.adduserdao"%>
+<%@page import="com.database.DAO.adduserdao"%>
 <%@page import="com.actions.*"%>
 <%@page import="com.login.*"%>
-<%@page import="com.DAO.adduserdao.*"%>
+<%@page import="com.database.DAO.adduserdao.*"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*"%>
 
@@ -12,22 +12,22 @@
 	boolean flag = false;
 
 	StringBuffer sb = null;
-	String info = "Something Went Wrong Try Again..";%>
+	String info = "Opps,Something Went Wrong Try Again..";%>
 
 <%
 	sb = new StringBuffer();
 
 onetp = request.getParameter("OTP");
-
-
+	
+	
 	String info = "Valid User";
 	String info1 = "InValid User";
 
 	/* Check User */
 
 	flag = adduserdao.checkOTP(onetp);
-
-	if (flag)
+	
+	if (flag) 
 	{
 		boolean flg = adduserdao.update_loginstatus(onetp);
 		System.out.println("  Verify Status : " + flg);
@@ -39,10 +39,11 @@ onetp = request.getParameter("OTP");
 	}
 
 	System.out.println("  One Time Pass: " + onetp);
-
+	
 
 	System.out.println("Response : ");
 	System.out.println(sb.toString());
 
 	out.println(sb.toString()); //Sending Response to Android App
 %>
+

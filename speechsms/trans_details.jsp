@@ -1,6 +1,6 @@
 <%@page import="com.util.AES_CBC_encryption_Decryption"%>
 <%@ page import="java.sql.*"%>
-<%@ page import="com.dhs.DAO.*"%>
+<%@ page import="com.database.DAO.*"%>
 
 
 

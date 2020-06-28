@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class RandomValue {
 	
-	          
+	               /*Random Value Generation*/
 	
 		
 	public static String  otpValue()
@@ -15,6 +15,9 @@ public class RandomValue {
 		Random random = new Random();
 		
 		int num=random.nextInt(values.length);
+		//int n=random(values);
+		//int m=random(values);
+		//System.out.println("Ramdom Position Of Array :" +num +" Ramdom Array Value Of prime  : "+values[num]);
 		return values[num];
 		
 	}
@@ -26,6 +29,9 @@ public class RandomValue {
 		Random random = new Random();
 		
 		int num=random.nextInt(values.length);
+		//int n=random(values);
+		//int m=random(values);
+		//System.out.println("Ramdom Position Of Array :" +num +" Ramdom Array Value Of prime  : "+values[num]);
 		return values[num];
 		
 	}

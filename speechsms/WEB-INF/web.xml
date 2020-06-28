@@ -14,7 +14,7 @@
 
 	<servlet>
 		<servlet-name>EditUser</servlet-name>
-		<servlet-class>com.main.actions.EditUser</servlet-class>
+		<servlet-class>com.web.actions.EditUser</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -24,7 +24,7 @@
 	
 	<servlet>
 		<servlet-name>GoBack</servlet-name>
-		<servlet-class>com.main.actions.GoBack</servlet-class>
+		<servlet-class>com.web.actions.GoBack</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -34,7 +34,7 @@
 
 	<servlet>
 		<servlet-name>AndroidResponse</servlet-name>
-		<servlet-class>com.main.actions.AndroidResponse</servlet-class>
+		<servlet-class>com.web.actions.AndroidResponse</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -44,7 +44,7 @@
 	 
 	<servlet>
 		<servlet-name>UpdateCloud</servlet-name>
-		<servlet-class>com.main.actions.UpdateCloud</servlet-class>
+		<servlet-class>com.web.actions.UpdateCloud</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -54,7 +54,7 @@
 	
 	<servlet>
 		<servlet-name>ViewPasswords</servlet-name>
-		<servlet-class>com.main.actions.ViewPasswords</servlet-class>
+		<servlet-class>com.web.actions.ViewPasswords</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -64,7 +64,7 @@
 
 	<servlet>
 		<servlet-name>adminloginaction</servlet-name>
-		<servlet-class>com.main.actions.adminloginaction</servlet-class>
+		<servlet-class>com.web.actions.adminloginaction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -74,7 +74,7 @@
 
 	<servlet>
 		<servlet-name>adminchangepwdaction</servlet-name>
-		<servlet-class>com.main.actions.adminchangepwdaction</servlet-class>
+		<servlet-class>com.web.actions.adminchangepwdaction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -84,7 +84,7 @@
 
 	<servlet>
 		<servlet-name>adduseraction</servlet-name>
-		<servlet-class>com.main.actions.adduseraction</servlet-class>
+		<servlet-class>com.web.actions.adduseraction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -94,7 +94,7 @@
 
 	<servlet>
 		<servlet-name>adduserdao</servlet-name>
-		<servlet-class>com.main.actions.adduserdao</servlet-class>
+		<servlet-class>com.web.actions.adduserdao</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -104,7 +104,7 @@
 
 	<servlet>
 		<servlet-name>updateuseraction</servlet-name>
-		<servlet-class>com.main.actions.updateuseraction</servlet-class>
+		<servlet-class>com.web.actions.updateuseraction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -114,7 +114,7 @@
 
 	<servlet>
 		<servlet-name>deleteuseraction</servlet-name>
-		<servlet-class>com.main.actions.deleteuseraction</servlet-class>
+		<servlet-class>com.web.actions.deleteuseraction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -124,7 +124,7 @@
 
 	<servlet>
 		<servlet-name>addspotaction</servlet-name>
-		<servlet-class>com.main.actions.addspotaction</servlet-class>
+		<servlet-class>com.web.actions.addspotaction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -134,7 +134,7 @@
 
 	<servlet>
 		<servlet-name>updatespotaction</servlet-name>
-		<servlet-class>com.main.actions.updatespotaction</servlet-class>
+		<servlet-class>com.web.actions.updatespotaction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -144,7 +144,7 @@
 
 	<servlet>
 		<servlet-name>deletespotaction</servlet-name>
-		<servlet-class>com.main.actions.deletespotaction</servlet-class>
+		<servlet-class>com.web.actions.deletespotaction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -154,7 +154,7 @@
 
 	<servlet>
 		<servlet-name>addfineaction</servlet-name>
-		<servlet-class>com.main.actions.addfineaction</servlet-class>
+		<servlet-class>com.web.actions.addfineaction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -164,7 +164,7 @@
 
 	<servlet>
 		<servlet-name>updatefineaction</servlet-name>
-		<servlet-class>com.main.actions.updatefineaction</servlet-class>
+		<servlet-class>com.web.actions.updatefineaction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -174,7 +174,7 @@
 
 	<servlet>
 		<servlet-name>deletefineaction</servlet-name>
-		<servlet-class>com.main.actions.deletefineaction</servlet-class>
+		<servlet-class>com.web.actions.deletefineaction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

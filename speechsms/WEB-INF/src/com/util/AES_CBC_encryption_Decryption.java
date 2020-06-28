@@ -33,6 +33,7 @@ import java.security.*;
 	    }
 	    public static Key generateKey() throws Exception {
 	        Key key = new SecretKeySpec(keyValue, ALGO);
+	       // System.out.println("key is :"+key);
 	        return key;
 	}
 	    public static void main(String[] args) throws Exception {

@@ -11,7 +11,7 @@ String subject=	 request.getParameter("subj");
 System.out.println(subject);
 String text =	 request.getParameter("text");
 System.out.println(text);
-boolean flag =CL_SendMail.sendPersonalizedMail1(to, "indprojectemail1@gmail.com", "*projectemail1123", subject, text, "smtp.gmail.com", "465");
+boolean flag =CL_SendMail.sendPersonalizedMail1(to, "demoprojectmail123@gmail.com", "demo@123", subject, text, "smtp.gmail.com", "465");
 System.out.print("Mailsent:"+flag);
 out.println(flag);
   %>

@@ -1,8 +1,8 @@
 <%@page import="com.util.AES_CBC_encryption_Decryption"%>
-<%@page import="com.DAO.adduserdao"%>
+<%@page import="com.database.DAO.adduserdao"%>
 <%@page import="com.actions.*"%>
 <%@page import="com.login.*"%>
-<%@page import="com.DAO.adduserdao.*"%>
+<%@page import="com.database.DAO.adduserdao.*"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" import="java.sql.*"%>
 
@@ -27,10 +27,10 @@
 	String checkall = "Please Enter All The Fields";
 
 	/* Check User */
-
+	
 	AES_CBC_encryption_Decryption a=new AES_CBC_encryption_Decryption();
-
-
+		
+		
 		String b=a.encrypt(mastpass);
 
 	flag = adduserdao.changeMastPass(uid, b);
@@ -51,3 +51,4 @@
 
 	out.println(sb.toString()); //Sending Response to Android App
 %>
+
