@@ -14,14 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.database.DAO.*;
 
-
-/**
- * @author Amutha
-
- *Project:-Cloud_Mona
- 
- *File:-ChangePass.java
- */
 public class adminchangepwdaction extends HttpServlet 
 {
 	public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException 

@@ -27,7 +27,7 @@ public class adminloginaction extends HttpServlet
         RequestDispatcher rd;
 		HttpSession hs1=request.getSession();
 		
-		String context = getServletContext().getInitParameter("dhs");
+		String context = getServletContext().getInitParameter("abc");
 		String config = getServletConfig().getInitParameter("foo");
 
 		System.out.println("---------------------------------------------------------------");

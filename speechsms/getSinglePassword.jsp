@@ -1,7 +1,7 @@
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.database.DAO.adduserdao"%>
-<%@page import="com.actions.*"%>
+<%@page import="com.web.actions.*"%>
 <%@page import="com.login.*"%>
 <%@page import="com.database.DAO.adduserdao.*"%>
 

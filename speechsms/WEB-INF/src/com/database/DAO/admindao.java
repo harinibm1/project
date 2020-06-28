@@ -170,43 +170,6 @@ public class admindao extends HttpServlet {
 		return flag;
 	}
     
-    public static int updatecloud(String name, String url, String uname,String pass,int code) throws SQLException
-   	{
-   		int flag=0,n2;
-   		Connection con=null;
-   		Statement stmt = null;
-   		ResultSet rs=null;
-
-   		try
-   		{
-   			serverconnector obj=new serverconnector();
-
-   			con = obj.connector();
-   			System.out.println("Connection Established !");
-
-   			stmt=con.createStatement();
-   			System.out.println("Statment Established !");
-   			
-   			n2=stmt.executeUpdate("update m_cloud set c_name='"+name+"',c_url='"+url+"',c_uname='"+uname+"',c_pwd='"+pass+"' where c_code='"+code+"'");
-   			
-   			System.out.println(n2);
-   			if(n2==1)
-   			{
-   				flag=1;
-   				System.out.println("Flag :"+flag);
-   			}
-   		}
-   		catch(Exception e)
-   		{
-   			System.out.println(e.getMessage());
-   		}
-   		finally
-   		{
-   			con.close();
-   		}
-
-   		return flag;
-   	}
     
     public static boolean deleteUser(String id) 
 	{
@@ -344,68 +307,6 @@ public class admindao extends HttpServlet {
 		return rs;
 	}
     
-    public static ResultSet getServer() throws SQLException
-	{
-		
-		Connection con=null;
-		Statement stmt = null;
-		ResultSet rs=null;
-		
-		try
-		{
-			serverconnector obj=new serverconnector();
-
-			con = obj.connector();
-			System.out.println("Connection Established !");
-
-			stmt=con.createStatement();
-			System.out.println("Statment Established !");
-
-			String sql="select *from m_cloud";
-			
-			rs=stmt.executeQuery(sql);
-
-			
-		}
-		catch(Exception e)
-		{
-			System.out.println(e.getMessage());
-		}
-		
-		return rs;
-	}
-
-    public static ResultSet getTrans() throws SQLException
-	{
-		
-		Connection con=null;
-		Statement stmt = null;
-		ResultSet rs=null;
-		
-		try
-		{
-			serverconnector obj=new serverconnector();
-
-			con = obj.connector();
-			System.out.println("Connection Established !");
-
-			stmt=con.createStatement();
-			System.out.println("Statment Established !");
-
-			String sql="select *from m_password";
-			
-			rs=stmt.executeQuery(sql);
-
-			
-		}
-		catch(Exception e)
-		{
-			System.out.println(e.getMessage());
-		}
-		
-		return rs;
-	}
-
     public static String getUserName(String uid) throws SQLException
    	{
    		

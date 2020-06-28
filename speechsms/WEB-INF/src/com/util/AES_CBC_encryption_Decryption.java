@@ -38,7 +38,7 @@ import java.security.*;
 	}
 	    public static void main(String[] args) throws Exception {
 			AES_CBC_encryption_Decryption a=new AES_CBC_encryption_Decryption();
-			String txt="test";
+			String txt="abc";
 			
 			String b=a.encrypt(txt);
 			System.out.println("enc :"+b);

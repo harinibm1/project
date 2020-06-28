@@ -12,10 +12,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Properties;
 
-/**
- * @author Amutha
- 
- */
 public class Utility
 {
 	public static int parse(String str) 

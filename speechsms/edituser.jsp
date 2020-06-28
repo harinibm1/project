@@ -1,6 +1,6 @@
 
 <%@ page import="java.sql.*" %>
-<%@page import="com.database.DAO.DAO.*"  %>
+<%@page import="com.database.DAO.*"  %>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.login.*"%>
 <html>

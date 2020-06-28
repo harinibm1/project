@@ -392,38 +392,6 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 		return vry_status;
 	}
 
-
-	public static String select_file(String remark,int ucode) throws Exception {
-		boolean flag = false;
-
-		String vry_status="";
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-
-		try {
-			serverconnector obj = new serverconnector();
-
-			con = obj.connector();
-			System.out.println("Connection Established !");
-
-			stmt = con.createStatement();
-			System.out.println("Statment Established !");
-
-			rs = stmt.executeQuery("select  f_name from m_trans where f_subject='"+ remark + "' and u_code='"+ucode+"' ");
-
-			while (rs.next()) {
-				vry_status = rs.getString(1);
-			}
-
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} finally {
-			con.close();
-		}
-
-		return vry_status;
-	}
 	
 	public static boolean checkUserId(String id) throws Exception {
 		boolean flag = false;
@@ -557,115 +525,6 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 	}
 	
 	
-	public static String select_subject(int usercode,String filename) throws Exception
-	{
-		String list = "";
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-
-		try {
-			serverconnector obj = new serverconnector();
-
-			con = obj.connector();
-			System.out.println("Connection Established !");
-
-			stmt = con.createStatement();
-			System.out.println("Statment Established !");
-
-			rs = stmt.executeQuery("select f_subject from m_trans where u_code='"+ usercode + "' and f_name = '"+filename+"'");
-
-			while (rs.next())
-			{
-				list = rs.getString(1);
-				
-				
-			}
-
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} finally {
-			con.close();
-		}
-
-		return list;
-	}
-	
-	public static ArrayList<String> getUploaded_file(String userid) throws Exception
-	{
-		ArrayList<String> list = new ArrayList<String>();
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-
-		try {
-			serverconnector obj = new serverconnector();
-
-			con = obj.connector();
-			System.out.println("Connection Established !");
-
-			stmt = con.createStatement();
-			System.out.println("Statment Established !");
-
-			String sql = "select a.f_subject from m_trans a join m_user b on a.u_code=b.u_code where a.f_type='Uploaded' and b.u_login_id='"+userid+"'";
-			
-			rs = stmt.executeQuery(sql);
-
-			
-			while (rs.next())
-			{
-				list.add(rs.getString(1));
-				
-				
-			}
-
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} finally {
-			con.close();
-		}
-
-		return list;
-	}
-	
-	public static ArrayList<String> getDownloaded_file(String userid) throws Exception
-	{
-		ArrayList<String> list = new ArrayList<String>();
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-
-		try {
-			serverconnector obj = new serverconnector();
-
-			con = obj.connector();
-			System.out.println("Connection Established !");
-
-			stmt = con.createStatement();
-			System.out.println("Statment Established !");
-
-			String sql = "select a.f_name from m_trans a join m_user b on a.u_code=b.u_code where a.f_type='Downloaded' and b.u_login_id='"+userid+"'";
-			
-			rs = stmt.executeQuery(sql);
-
-			
-			while (rs.next())
-			{
-				list.add(rs.getString(1));
-				
-				
-			}
-
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} finally {
-			con.close();
-		}
-
-		return list;
-	}
-	
-	
 	public static boolean adduser(String id, String pwd, String name,String mastpass, String mobile,String otp,String status,String phone2,String imei) throws SQLException {
 		System.out.println("New User Process...");
 		boolean flag = false;
@@ -708,50 +567,6 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 
 		return flag;
 	}
-
-	public static boolean addtrans(String date, String time, int ucode,String filename, String subject, String type) throws SQLException {
-		
-		boolean flag = false;
-
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-
-		try {
-			System.out.println("New User Process...");
-			serverconnector obj = new serverconnector();
-
-			con = obj.connector();
-			System.out.println("Connection Established !");
-
-			stmt = con.createStatement();
-			System.out.println("Statment Established !");
-
-			String sql = "insert into m_trans(t_date,t_time,u_code,f_name,f_subject,f_type) values('"
-					+ date
-					+ "','"
-					+ time
-					+ "','"
-					+ ucode
-					+ "','"
-					+ filename
-					+ "','"
-					+ subject + "','" + type + "')";
-
-			System.out.println("m_trans table :" + sql);
-			stmt.executeUpdate(sql);
-
-			flag = true;
-
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		} finally {
-			con.close();
-		}
-
-		return flag;
-	}
-
 	
 	public static ArrayList<String> getUserinfo(String userid) {
 
@@ -781,38 +596,6 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 				list.add(rs.getString(3));
 				
 
-			}
-
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-		return list;
-
-	}
-
-	public static ArrayList<String> getfile() {
-		int flag = 0;
-
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-
-		ArrayList<String> list = new ArrayList<String>();
-
-		try {
-			serverconnector obj = new serverconnector();
-
-			con = obj.connector();
-			System.out.println("Connection Established !");
-
-			stmt = con.createStatement();
-			System.out.println("Statment Established !");
-
-			String sql = "select img_name from m_image";
-			rs = stmt.executeQuery(sql);
-			while (rs.next())
-			{
-				list.add(rs.getString(1));
 			}
 
 		} catch (Exception e) {
@@ -887,6 +670,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 		return rs;
 
 	}
+	
 	public static String getUserSinglePassword(String ucode,String word) {
 		int flag = 0;
 
@@ -927,6 +711,7 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 		return sb.toString();
 
 	}
+	
 	public static boolean changePass(String user, String newpass) {
 		boolean flag = false;
 
@@ -1046,39 +831,4 @@ public static boolean updateUserOTP(String otp, String userid) throws Exception 
 		return flag;
 
 	}
-	public static ArrayList<String> getTotalAmt(int code, String date) {
-		int flag = 0;
-
-		Connection con = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-
-		ArrayList<String> list = new ArrayList<String>();
-
-		try {
-			serverconnector obj = new serverconnector();
-
-			con = obj.connector();
-			System.out.println("Connection Established !");
-
-			stmt = con.createStatement();
-			System.out.println("Statment Established !");
-
-			String sql = "select t_amount from m_trans where u_code = '" + code
-					+ "' and t_date = '" + date + "'";
-
-			System.out.println(sql);
-			rs = stmt.executeQuery(sql);
-			while (rs.next()) {
-				list.add(rs.getString(1));
-			}
-
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-		return list;
-
-	}
-
-	
 }
