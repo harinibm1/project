@@ -67,9 +67,7 @@ public class ViewPasswords extends HttpServlet
 		}
 		catch(Exception e)
 		{
-			System.out.println("Opps's Exception is in Admin->ViewUserFeedback Servlet : ");
-			e.printStackTrace();
-			out.println("Opps's Exception is in Admin->ViewUserFeedback Servlet : ");
+			
 			e.printStackTrace();
 		}
 	}
