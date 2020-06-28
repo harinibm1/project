@@ -27,7 +27,7 @@ public class CL_SendMail {
 	public static boolean sendPersonalizedMail(String recipient, String subject,String message,String qrcode,String filename)  
 	{
 		boolean debug = true;
-		String from="dhs.dummy.mail@gmail.com";
+		String from="dummy.mail@gmail.com";
 		try
 		{
 			
@@ -45,7 +45,7 @@ public class CL_SendMail {
 			{
 				protected PasswordAuthentication getPasswordAuthentication() 
 				{
-					return new PasswordAuthentication("dhs.dummy.mail@gmail.com", "dhscvs12345");
+					return new PasswordAuthentication("dummy.mail@gmail.com", "abc123");
 				}
 			});
 
