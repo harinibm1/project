@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   android:background="@drawable/mobilehome"
+    android:orientation="vertical" >
+ <TextView
+        android:id="@+id/exception1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="90dip"
+        android:text="Hands Free Speech based EMAIL System "
+        android:textColor="#FF7F50"
+        android:textStyle="bold"
+       android:textSize="20dp"
+       
+         android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_battery"
+              android:layout_width="290px"
+        android:layout_height="190px"
+        android:layout_below="@+id/btn_rem"
+        android:layout_marginTop="42dp"
+        android:layout_toRightOf="@+id/btn_rem"
+           android:background="@drawable/bat" />
+
+    <Button
+        android:id="@+id/btn_Mail"
+           android:layout_width="290px"
+        android:layout_height="290px"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/btn_battery"
+        android:background="@drawable/email"
+         />
+
+    <Button
+        android:id="@+id/btn_rem"
+        android:layout_width="290px"
+        android:layout_height="290px"
+        android:layout_alignBaseline="@+id/btn_Mail"
+        android:layout_alignBottom="@+id/btn_Mail"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:background="@drawable/rem"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+   android:background="@drawable/bg10"
+   >
+
+    <!-- Login Title -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Password Details"
+        android:textColor="#ff0033"
+        android:paddingTop="10dip"
+        android:textSize="20dp" />
+    <!-- Login Image -->
+
+   
+    <!-- layout for Username -->
+
+ 
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+            android:text="DomainName :"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/dname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:ems="10"
+            android:inputType="text" >
+
+            <requestFocus />
+        </TextView>
+    </LinearLayout>
+    <!-- layout for Password -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+            android:text="User Id :"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/uid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:inputType="text" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+            android:text="Password :"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/upassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             
+            android:inputType="text" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+        android:layout_gravity="center"
+        android:text="Back" />
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+/*Generated from Designmycss.com*/
+table
+{
+    border-collapse:collapse;
+    border-style:solid;
+    border-width:1px;
+    border-color:#707070;
+    font:14px Georgia, serif;
+    padding:0px;
+    box-shadow:1px 1px 3px 1px #6E6D6D;
+}
+ 
+ caption
+ {
+	font-size:20px;
+	font-weight:normal;
+	background:url(../img/zebratable.png);
+	background-repeat:no-repeat;
+	background-position: 100px center;
+	padding-top: 20px;
+	height:50px;
+	}
+	
+th
+{
+    color:#FFFFFF;
+    background:#DB2C2C;
+    background: -moz-linear-gradient(top,  #DB2C2C 0%, #571515 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DB2C2C), color-stop(100%,#571515));
+    background: -webkit-linear-gradient(top,#DB2C2C 0%,#571515 100%);
+    background: -o-linear-gradient(top,#DB2C2C 0%,#571515 100%);
+    background: -ms-linear-gradient(top,#DB2C2C 0%,#571515 100%);
+    background: linear-gradient(top,#DB2C2C 0%,#571515 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DB2C2C',endColorstr='#571515',GradientType=0s);
+    font-weight:bold;
+    padding:5px;
+    text-align:center;
+    vertical-align:top;
+}
+ 
+tr
+{
+    color:#000000;
+    border-top-style: solid;
+    border-width:1px;
+    border-color:#707070;
+    font-weight:normal;
+}
+ 
+tr:hover td
+{
+    background:#DB2C2C;
+    color:#FFFFFF;
+}
+ 
+tr:nth-child(odd) td
+{
+background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td
+{
+    background:#DB2C2C;
+}
+ 
+td
+{
+    background:#FFFFFF;
+    padding:3px 5px;
+    text-align:left;
+    vertical-align:top;
+}
