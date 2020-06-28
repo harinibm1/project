@@ -63,9 +63,7 @@ public class ViewPasswords extends HttpServlet
 				 sb.append(info);
 		    }
 			  
-		    System.out.println("View Feedback Question List  :\n" +sb.toString());
-		    out.println(sb.toString());
-			
+		   
 		}
 		catch(Exception e)
 		{
